@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * Ã°ÅİÅÅĞò
+ * å†’æ³¡æ’åº
  * 
  * @author ASUS
  *
@@ -24,7 +24,7 @@ public class BubbleSort {
 	}
 
 	/**
-	 * Ã°ÅİÅÅĞòËã·¨
+	 * å†’æ³¡æ’åºç®—æ³•
 	 * 
 	 * @param number
 	 */
