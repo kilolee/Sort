@@ -5,26 +5,26 @@
 public class BubbleSort {
 
 
-    public static void sort(int[] source) {
+    public static void sort(int[] arr) {
         System.out.println("==========每趟排序的结果==========");
-        for (int i = source.length - 1; i > 0; i--) {
+        for (int i = arr.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (source[j] > source[j + 1]) {
-                    swap(source, j, j + 1);
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
                 }
             }
-            for (int j = 0; j < source.length; j++) {
-                System.out.printf("%d ", source[j]);
+            for (int j = 0; j < arr.length; j++) {
+                System.out.printf("%d ", arr[j]);
             }
             System.out.println();
         }
         System.out.println("=================================");
     }
 
-    private static void swap(int[] source, int x, int y) {
-        int temp = source[x];
-        source[x] = source[y];
-        source[y] = temp;
+    private static void swap(int[] arr, int x, int y) {
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
     }
 
     public static void main(String[] args) {
