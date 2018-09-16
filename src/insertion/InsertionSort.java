@@ -28,5 +28,4 @@ public class InsertionSort {
             System.out.printf("%d ", a[i]);
         }
     }
-
 }
