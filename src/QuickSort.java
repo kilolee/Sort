@@ -4,10 +4,18 @@
  */
 public class QuickSort {
 
+    /**
+     * 对arr[l...r]部分进行partition操作
+     * arr[l+1...p] < v ; arr[p+1...r] > p;即p位置是最后一个小于v的数值
+     * @param arr
+     * @param l
+     * @param r
+     * @return
+     */
     public static int partition(int[] arr, int l, int r) {
         int v = arr[l];
+        // arr[l+1...p] < v ; arr[p+1...i) > v
         int p = l;
-        // arr[l+1...p] < v ; arr[p+1...i) > p;即p位置是最后一个小于v的数值
         for (int i = l + 1; i <= r; i++) {
             if (arr[i] < v) {
                 p++;
@@ -32,6 +40,7 @@ public class QuickSort {
      * @param r
      */
     private static void sort(int[] arr, int l, int r) {
+        //递归到底的情况处理
         if (l >= r)
             return;
         int position = partition(arr, l, r);
