@@ -1,18 +1,20 @@
-package insertion;
+package SelectionSort;
 
 /**
  * Created by kilo on 2018/9/16.
- * 插入排序
+ * 选择排序
  */
-public class InsertionSort {
-
+public class SelectionSort {
     public static void sort(int[] arr) {
-        //执行了arr.length-1次排序
-        for (int i = 1; i < arr.length; i++) {
-            //寻找元素arr[i]合适的插入位置
-            for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-                swap(arr, j, j - 1);
+        //进行了arr.length-1次排序
+        for (int i = 0; i < arr.length-1; i++) {
+            //寻找[i,arr.length)区间里的最小值
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex])
+                    minIndex = j;
             }
+            swap(arr, i, minIndex);
         }
     }
 
