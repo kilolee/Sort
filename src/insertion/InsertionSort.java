@@ -13,6 +13,7 @@ public class InsertionSort {
             for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
                 swap(arr, j, j - 1);
             }
+
             //输出每趟排序后的结果
             for (int j = 0; j < arr.length; j++) {
                 System.out.printf("%d ", arr[j]);
