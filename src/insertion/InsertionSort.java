@@ -9,7 +9,7 @@ public class InsertionSort {
     public static void sort(int[] arr) {
         //执行了arr.length-1次排序
         for (int i = 1; i < arr.length; i++) {
-            //寻找元素arr[i]合适的插入位置
+            //寻找元素arr[i]合适的插入位置,找到位置后则推出循环
             for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
                 swap(arr, j, j - 1);
             }
