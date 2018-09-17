@@ -1,4 +1,4 @@
-package SelectionSort;
+package selection;
 
 /**
  * Created by kilo on 2018/9/16.
