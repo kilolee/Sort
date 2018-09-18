@@ -21,11 +21,11 @@ public class BinaryInsertSort {
 
     public static void sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
-            int temp = arr[i];
+            int temp = arr[i];//待插入的元素
             int low = 0;
             int high = i - 1;
 
-            //不断折半，寻找合适的插入位置
+            //不断折半，寻找合适的插入位置，low位置是temp的最终位置
             while (low <= high) {
                 int mid = (low + high) / 2;
                 if (temp > arr[mid]) {
