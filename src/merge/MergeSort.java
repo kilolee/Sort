@@ -46,6 +46,13 @@ public class MergeSort {
      * @param r
      */
     private static void sort(int[] arr, int l, int r) {
+    /*
+        // 优化2: 对于小规模数组, 使用插入排序
+        if( r - l <= 15 ){
+            InsertionSort.sort(arr, l, r);
+            return;
+        }
+      */
         if (l >= r)
             return;
 
@@ -53,6 +60,12 @@ public class MergeSort {
         sort(arr, l, mid);
         sort(arr, mid + 1, r);
         merge(arr, l, mid, r);
+/*
+        // 优化1: 对于arr[mid] <= arr[mid+1]的情况,不进行merge
+        // 对于近乎有序的数组非常有效,但是对于一般情况,有一定的性能损失
+        if( arr[mid].compareTo(arr[mid+1]) > 0 )
+            merge(arr, l, mid, r);
+*/
     }
 
 
