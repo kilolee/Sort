@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by kilo on 2018/9/18.
- * 归并排序
+ * 归并排序 O(nlogn)
  */
 public class MergeSort {
 
