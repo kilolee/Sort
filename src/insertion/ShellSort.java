@@ -17,7 +17,7 @@ public class ShellSort {
                 // 对 arr[i], arr[i-d], arr[i-2*d], arr[i-3*d]... 使用插入排序
                 int temp = arr[i];
                 int j = i;
-                for (; j >= d && temp < arr[j - d]; j -= d) {
+                for (; j >= d && arr[j - d] > temp; j -= d) {
                     arr[j] = arr[j - d];
                 }
                 arr[j] = temp;
