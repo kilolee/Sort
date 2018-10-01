@@ -22,6 +22,25 @@ public class MaxHeap {
     }
 
     /**
+     * heapify过程创建堆
+     * 构造函数，为长度为n的数组arr构造大根堆
+     *
+     * @param arr
+     * @param n
+     */
+    public MaxHeap(int[] arr, int n) {
+        data = new int[n + 1];
+        this.capacity = n;
+        for (int i = 0; i < n; i++)
+            data[i + 1] = arr[i];
+        count = n;
+        //从最后一个非叶节点开始调整
+        for (int i = n / 2; i > 0; i--) {
+            shiftDown(i);
+        }
+    }
+
+    /**
      * 返回堆中的元素个数
      *
      * @return
