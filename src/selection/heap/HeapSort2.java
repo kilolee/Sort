@@ -3,7 +3,11 @@ package selection.heap;
 /**
  * Created by kilo on 2018/10/1.
  * 借助我们的heapify过程创建堆
- * 时间复杂度O(nlogn)，但是比HeapSort1性能更优, 因为创建堆的性能更优（heapify的时间复杂度为O(logn)）
+ * 时间复杂度O(nlogn)，但是比HeapSort1性能更优, 因为创建堆的性能更优（heapify过程的时间复杂度为O(n)）
+ * <p>
+ * <p>
+ * 将n个元素逐个插入到一个空堆中，算法的时间复杂度是O(nlogn)
+ * heapify过程的时间复杂度为O(n)
  */
 public class HeapSort2 {
     public static void sort(int[] arr, int n) {
