@@ -93,7 +93,8 @@ public class MaxHeap {
     public int extractMax() {
         assert count > 0;
         int ret = data[1];
-        swap(1, count);
+//        swap(1, count);
+        data[1] = data[count];
         count--;
         shiftDown(1);
         return ret;
